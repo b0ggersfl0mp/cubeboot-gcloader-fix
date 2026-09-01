@@ -10,7 +10,7 @@ jobs:
       - name: Setup
         run: |
           apt-get update && apt-get install -y genisoimage nodejs build-essential gcc-arm-none-eabi python3-distutils python3-setuptools python3-pip
-          pip3 install --break-system-packages -r patches/scripts/requirements.txt
+          pip3 install -r patches/scripts/requirements.txt
       - name: Build cubeboot
         run: cd entry; make clean && make
       - name: Build apploader
